@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Unicorn.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Unicorn"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" AllowDrop="False">
+        <FlyoutBase.AttachedFlyout>
+            <Flyout>
+                <Grid/>
+            </Flyout>
+        </FlyoutBase.AttachedFlyout>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4"/>
+        </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Height="67" Margin="616,86,0,0" Text="#AU01" VerticalAlignment="Top" Width="379" FontSize="48" Grid.Column="1" IsReadOnly="True" Opacity="0.5"/>
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="46,82,0,0" Text="Farmer's ID" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" FontSize="48" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="46,193,0,0" Text="Accommodity" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" FontSize="48" Grid.Column="1"/>
+        <TextBox x:Name="weight" HorizontalAlignment="Left" Height="67" Margin="613,309,0,0" Text="" VerticalAlignment="Top" Width="379" FontSize="48" Grid.Column="1" AcceptsReturn="False" InputScope="Number"/>
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="46,307,-431,0" Text="Weight(in Tonnes)" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" FontSize="48" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cb" Grid.Column="1" HorizontalAlignment="Left" Height="61" Margin="617,203,0,0" VerticalAlignment="Top" Width="375" CompositeMode="MinBlend" FontSize="48" LostFocus="cb_LostFocus"/>
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="49,432,-503,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="454" FontSize="48" Grid.Column="1" Grid.ColumnSpan="2" Text="Dates You Can Come"/>
+        <CheckBox x:Name="date2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="764,457,0,0" VerticalAlignment="Top" Width="129"/>
+        <CheckBox x:Name="date4" Content="CheckBox" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="29" Margin="1102,457,-1334,0" VerticalAlignment="Top" Width="232" RenderTransformOrigin="1.93,-0.419"/>
+        <CheckBox x:Name="date3" Content="CheckBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="953,457,0,0" VerticalAlignment="Top" Width="129"/>
+        <CheckBox x:Name="date1" Content="CheckBox" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="10" Margin="615,457,-744,0" VerticalAlignment="Top" Width="129"/>
+        <CheckBox x:Name="date6" Content="CheckBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="764,513,0,0" VerticalAlignment="Top" Width="129"/>
+        <CheckBox x:Name="date7" Content="CheckBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="953,513,0,0" VerticalAlignment="Top" Width="129"/>
+        <CheckBox x:Name="date5" Content="CheckBox" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="129" Grid.ColumnSpan="3" Margin="615,513,-739,0"/>
+        <Button x:Name="Find" Content="FIND!" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="96" Margin="238,686,0,0" VerticalAlignment="Top" Width="243" FontSize="48" Click="Button_Click"/>
+        <Button x:Name="Submit" Content="SUBMIT" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="96" Margin="886,686,0,0" VerticalAlignment="Top" Width="243" FontSize="48" IsEnabled="False" Click="Submit_Click"/>
+
+    </Grid>
+</Page>
